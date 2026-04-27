@@ -19,3 +19,9 @@ def upload(request):
         student = Student.objects.create(image=file)
         
     return render(request,'upload.html',{'student':student})
+
+def dashboard(request):
+    return render(request, 'dashboard.html')
+
+def home(request):
+    return render(request, 'home.html')
