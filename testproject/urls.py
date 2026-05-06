@@ -19,8 +19,17 @@ from django.urls import include,path
 from accounts import views
 
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/', views.user_login, name='login'),
     path('', include('students.urls')),
+    path('api/',include('students.api_urls')),
+    path('api-auth/',include('rest_framework.urls')),
 ]
+
+REST_FRAMEWORK = {
+    "DEFAULT_PAGINATION_CLASS":
+        'rest_framework.pagination.PageNumberPagination',
+        'PAGE_SIZE':5
+}

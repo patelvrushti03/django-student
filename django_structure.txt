@@ -1,0 +1,32 @@
+myproject/
+├── manage.py
+├── requirements.txt
+│
+├── myproject/
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   ├── asgi.py
+│   └── wsgi.py
+│
+├── app_name/
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── tests.py
+│   ├── views.py
+│   ├── urls.py
+│
+│   ├── migrations/
+│   │   └── __init__.py
+│
+│   ├── templates/
+│   │   └── app_name/
+│   │       └── index.html
+│
+│   ├── static/
+│   │   └── app_name/
+│   │       ├── css/
+│   │       ├── js/
+│   │       └── images/

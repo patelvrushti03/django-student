@@ -9,3 +9,7 @@ class Student(models.Model):
 
     def __str__(self):
         return self.name
+    
+    owner = models.ForeignKey(
+        "auth.user",related_name="snippets",on_delete=models.CASCADE,null=True,blank=True
+    )

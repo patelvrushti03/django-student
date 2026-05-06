@@ -1,5 +1,9 @@
 from django.shortcuts import render
 from .models import Student
+from rest_framework.viewsets import ModelViewSet
+from students.serializers import StudentModelSerializer
+from rest_framework import permissions
+from students.permissions import  IsOwnerOrReadOnly
 
 def student(request):
     students = Student.objects.all()
@@ -25,3 +29,8 @@ def dashboard(request):
 
 def home(request):
     return render(request, 'home.html')
+
+class StudentModelViewSet(ModelViewSet):
+    queryset = Student.objects.all()
+    serializer_class = StudentModelSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly,IsOwnerOrReadOnly]
