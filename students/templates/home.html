@@ -1,8 +1,0 @@
-<h1>Welcome to Home Page</h1>
-
-{% if user.is_authenticated %}
-    <p>Hello, {{ user.username }}</p>
-    <a href="/accounts/logout/">Logout</a>
-{% else %}
-    <a href="/accounts/login/">Login</a>
-{% endif %}

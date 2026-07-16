@@ -15,3 +15,5 @@ def user_login(request):
         else:
             return render(request, 'registration/login.html', {'error': 'Invalid credentials'})
     return render(request, 'registration/login.html')
+
+#owner = models.ForeignKey(User, on_delete=models.CASCADE)
