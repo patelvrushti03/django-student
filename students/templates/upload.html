@@ -1,0 +1,9 @@
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="image">
+    <button type="submit">Upload</button>
+</form>
+{% for student in students %}
+<img src="{{ student.image.url }}" width="200">
+{% endfor %}
